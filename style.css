@@ -1,12 +1,12 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f4f4f9;
+  background-color: #0d0d0d;
 }
 
 .questionContainer {
@@ -18,23 +18,23 @@ input[type="text"] {
   padding: 10px;
   margin-right: 10px;
   border-radius: 5px;
-  border: 2px solid #ddd;
+  border: 2px solid #2f2f2f;
   transition: border-color 0.3s;
 }
 
 input[type="text"]:focus {
-  border-color: #0056b3;
+  border-color: #acacac;
 }
 
 button {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: #007bff;
+  background-color: #00a67d;
   color: white;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #df3079;
 }
