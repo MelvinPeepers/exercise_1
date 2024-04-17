@@ -1,10 +1,14 @@
 let currentStep = 0;
 let userData = {};
+// two variables one to track the question number, and one to store the users response
+console.log(currentStep);
+console.log(userData);
 
 function processInput() {
   const userInput = document.getElementById("userInput");
   const labelQuestion = document.getElementById("labelQuestion");
   const output = document.getElementById("output");
+  // function that gets the value from the HTML form
 
   if (currentStep === 0) {
     userData.name = userInput.value;
