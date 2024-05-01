@@ -9,30 +9,57 @@
     <script src="script.js" async></script>
   </head>
 
-    <h1 class="header">Exercise 1</h1>
+      <div class="container">
 
-    <h2 class="header">Create a simple site (hosted on Netlify and repo on github).</h2>
+        <h1 class="header">Exercise</h1>
 
-    <h3 class="header">Criteria:</h3>
+        <h2 class="header">Create a simple site (hosted on Netlify and repo on github).</h2>
 
-    <ul>
-      <li>
-        Ask user their name, age, location but ask it individually, hiding /
-        showing the next question.
-      </li>
-      <li>Write a sentence with those 3 inputs.</li>
-      <li>
-        Write all of this into the “main” branch of your repo. No need for a
-        separate branch or pull request for now.
-      </li>
-    </ul>
+        <div class="list-wrapper">
 
-    <div class="questionContainer">
-        <label id="labelQuestion">What is your name?</label>
-        <input type="text" id="userInput" placeholder="Enter name here">
-        <button onclick="processInput()">Next question</button>
-        <h4 id="output"></h4>
-        <button id="btnClear" type="button" style="display:none;">Start Over</button>
+          <h2>First Round</h2>
+
+          <h3 class="header">Criteria:</h3>
+
+          <ul class="exercise-clist first-list">
+            <li>
+              Ask user their name, age, location but ask it individually, hiding /
+              showing the next question.
+            </li>
+            <li>Write a sentence with those 3 inputs.</li>
+            <li>
+              Write all of this into the “main” branch of your repo. No need for a
+              separate branch or pull request for now.
+            </li>
+          </ul>
+
+          <h2>Next Round</h2>
+
+          <h3 class="header">Criteria:</h3>
+
+          <ul class="exercise-clist second-list">
+            <li>Create a separate branch to work on this task, deploy it on Netlify.</li>
+            <li>Keep everything that you have and query <a href="https://swapi.py4e.com/documentation">https://swapi.py4e.com/documentation</a> (using netlify function):
+                <ul class="sublist">
+                    <li>Get a list of 5 planets (<a href="https://swapi.py4e.com/documentation#planets">https://swapi.py4e.com/documentation#planets</a>) of your choosing (bonus points if its always 5 different ones).</li>
+                    <li>Ask the user what their favorite planet is.</li>
+                    <li>Print that planet name is a sentence.</li>
+                </ul>
+            </li>
+          </ul>
+
+          <div class="questionContainer">
+              <label id="labelQuestion">What is your name?</label>
+              <input type="text" id="userInput" placeholder="Enter name here">
+              <button onclick="processInput()">Next question</button>
+              <h4 id="output"></h4>
+              <button id="btnClear" type="button" style="display:none;">Start Over</button>
+          </div>
+
+          
+
+        </div>
+
     </div>
 
   </body>
