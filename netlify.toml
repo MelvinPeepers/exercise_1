@@ -1,4 +1,5 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/#functions
 
-[functions]
-  directory = ".netlify/functions/"
+[build]
+  publish = "."
+  functions = ".netlify/functions"
