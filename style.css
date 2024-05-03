@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  color: #df3079;
+  color: #ffca28;
 }
 
 h3 {
@@ -53,13 +53,20 @@ li {
   align-items: center;
 }
 
+.exercise-clist {
+  text-align: left;
+  list-style-position: inside;
+  margin: 0 auto;
+}
+
 .first-list,
 .second-list {
   width: 70%;
 }
 
 .sublist {
-  margin-left: 20px;
+  text-align: left;
+  margin-left: 5%;
 }
 
 .questionContainer {
@@ -104,4 +111,8 @@ h4 {
 
 #btnClear {
   background-color: #df3079;
+}
+
+a {
+  color: #9dcdf5;
 }
