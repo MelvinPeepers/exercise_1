@@ -16,21 +16,40 @@ const fetch = require("node-fetch");
 //   }
 // };
 
-exports.handler = async (event, context) => {
-  const API_ENDPOINT = "https://www.swapi.tech/api/planets/1/";
+// exports.handler = async (event, context) => {
+//   const API_ENDPOINT = "https://www.swapi.tech/api/planets/1/";
 
+//   try {
+//     const response = await fetch(API_ENDPOINT);
+//     const data = response.data;
+//     return {
+//       statusCode: 200,
+//       body: JSON.stringify(data),
+//     };
+//   } catch (error) {
+//     console.error(error);
+//     return {
+//       statusCode: 500,
+//       body: JSON.stringify({ error: "An error occurred" }),
+//     };
+//   }
+// };
+
+exports.handler = async function (event, context) {
   try {
-    const response = await fetch(API_ENDPOINT);
-    const data = response.data;
+    const fetch = await import("node-fetch");
+    const response = await fetch.default(
+      "https://www.swapi.tech/api/planets/1/"
+    );
+    const data = await response.json();
     return {
       statusCode: 200,
       body: JSON.stringify(data),
     };
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "An error occurred" }),
+      body: JSON.stringify({ error: err.message }),
     };
   }
 };
