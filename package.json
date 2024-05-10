@@ -1,0 +1,15 @@
+{
+  "name": "exercise_1",
+  "version": "1.0.0",
+  "description": "Create a simple site (hosted on Netlify and repo on Github). Criteria:",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
