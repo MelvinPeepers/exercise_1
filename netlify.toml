@@ -2,7 +2,7 @@
 
 [build]
   publish = "."
-  functions = ".netlify/functions/swapi"
+  functions = "netlify/functions/swapi"
 
 [functions]
   node_bundler = "esbuild"
