@@ -4,14 +4,14 @@ exports.handler = async (event, context) => {
   const API_ENDPOINT = "https://www.swapi.tech/api/planets/1/";
 
   try {
-    console.time("TIME");
+    console.time("AXIOSTIME");
     const response = await axios.get(API_ENDPOINT);
+    console.timeEnd("AXIOSTIME");
     const data = response.data;
     return {
       statusCode: 200,
       body: JSON.stringify(data),
     };
-    console.timeEnd("TIME");
   } catch (error) {
     console.error(error);
     return {
