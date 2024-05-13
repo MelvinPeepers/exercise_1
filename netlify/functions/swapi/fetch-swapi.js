@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 exports.handler = async function (event, context) {
   try {
     const fetch = await import("node-fetch");
-    console.time("");
+    console.time("FETCHTIME");
     const response = await fetch.default(
       "https://www.swapi.tech/api/planets/1/"
     );
