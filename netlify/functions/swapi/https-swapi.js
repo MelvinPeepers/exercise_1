@@ -5,6 +5,7 @@ exports.handler = async (event, context) => {
   const url = "https://www.swapi.tech/api/planets/1/";
 
   return new Promise((resolve) => {
+    console.time("HTTPSTIME");
     https.get(url, (response) => {
       let data = "";
       response.on("data", (chunk) => (data += chunk));
@@ -15,5 +16,6 @@ exports.handler = async (event, context) => {
         });
       });
     });
+    console.timeEnd("HTTPSTIME");
   });
 };
