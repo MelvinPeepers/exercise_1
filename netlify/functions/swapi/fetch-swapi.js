@@ -5,13 +5,14 @@ exports.handler = async function (event, context) {
     const fetch = await import("node-fetch");
     console.time("FETCHTIME");
     const response = await fetch.default(
-      "https://www.swapi.tech/api/planets/1/"
+      "https://www.swapi.tech/api/planets/1"
     );
     console.timeEnd("FETCHTIME");
     const data = await response.json();
+    const name = data.name;
     return {
       statusCode: 200,
-      body: JSON.stringify(data.name),
+      body: JSON.stringify(name),
     };
   } catch (err) {
     return {
