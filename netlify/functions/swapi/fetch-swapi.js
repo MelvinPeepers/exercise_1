@@ -4,7 +4,9 @@ exports.handler = async function (event, context) {
   try {
     const fetch = await import("node-fetch");
     console.time("FETCHTIME");
-    const response = await fetch.default("https://www.swapi.tech/api/planets/");
+    const response = await fetch.default(
+      "https://www.swapi.tech/api/planets/1"
+    );
     console.timeEnd("FETCHTIME");
     const data = await response.json();
     const name = data.result.properties.name;
