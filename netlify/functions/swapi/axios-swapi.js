@@ -7,10 +7,11 @@ exports.handler = async (event, context) => {
     console.time("AXIOSTIME");
     const response = await axios.get(API_ENDPOINT);
     console.timeEnd("AXIOSTIME");
-    const data = response.data;
+    const data = response.data.json();
+    const name = data.result.properties.name;
     return {
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: JSON.stringify({ name }),
     };
   } catch (error) {
     console.error(error);
