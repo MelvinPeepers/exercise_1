@@ -6,7 +6,7 @@ export async function handler(event, context) {
     console.time("AXIOSTIME");
     const response = await axios.get(API_ENDPOINT);
     console.timeEnd("AXIOSTIME");
-    const data = response.data.json();
+    const data = response.data;
     const name = data.result.properties.name;
     return {
       statusCode: 200,
