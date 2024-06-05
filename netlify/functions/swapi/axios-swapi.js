@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function handler(event, context) {
+export async function handler() {
   const API_ENDPOINT = "https://www.swapi.tech/api/planets/1/";
   try {
     console.time("AXIOSTIME");

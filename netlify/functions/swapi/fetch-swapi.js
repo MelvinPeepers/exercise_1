@@ -2,9 +2,10 @@
 import fetch from "node-fetch";
 
 // Define the Netlify Function handler
-export async function handler(event, context) {
+// removed event, context cause they aren't read
+export async function handler() {
   try {
-    // Start the timer to measure the fetch duration
+    // starts the timer to measure the fetch duration
     console.time("FETCHTIME");
 
     // Make a GET request to the SWAPI to fetch the data for planet with ID 1

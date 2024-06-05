@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create a simple site (hosted on Netlify and repo on Github). Criteria:",
   "main": "script.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
