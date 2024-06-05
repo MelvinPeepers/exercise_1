@@ -1,8 +1,7 @@
-const axios = require("axios");
+import axios from "axios";
 
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   const API_ENDPOINT = "https://www.swapi.tech/api/planets/1/";
-
   try {
     console.time("AXIOSTIME");
     const response = await axios.get(API_ENDPOINT);
@@ -11,7 +10,7 @@ exports.handler = async (event, context) => {
     const name = data.result.properties.name;
     return {
       statusCode: 200,
-      body: JSON.stringify({ name }),
+      body: name,
     };
   } catch (error) {
     console.error(error);
@@ -20,4 +19,4 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ error: "An error occurred" }),
     };
   }
-};
+}
