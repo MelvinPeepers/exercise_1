@@ -11,7 +11,7 @@ exports.handler = async function (event, context) {
     const name = data.result.properties.name;
     return {
       statusCode: 200,
-      body: JSON.stringify({ name }),
+      body: name,
     };
   } catch (err) {
     return {
