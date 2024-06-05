@@ -26,9 +26,7 @@ import fetch from "node-fetch";
 export async function handler(event, context) {
   try {
     console.time("FETCHTIME");
-    const response = await fetch.default(
-      "https://www.swapi.tech/api/planets/1"
-    );
+    const response = await fetch("https://www.swapi.tech/api/planets/1");
     console.timeEnd("FETCHTIME");
     const data = await response.json();
     const name = data.result.properties.name;
