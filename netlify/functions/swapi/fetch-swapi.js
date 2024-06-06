@@ -9,7 +9,7 @@ export async function handler() {
     console.time("FETCHTIME");
 
     // Make a GET request to the SWAPI to fetch the data for planet with ID 1
-    const response = await fetch("https://www.swapi.tech/api/planets/1");
+    const response = await fetch("https://www.swapi.tech/api/planets/");
 
     // End the timer and log the fetch duration
     console.timeEnd("FETCHTIME");
