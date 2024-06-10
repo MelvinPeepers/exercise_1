@@ -8,7 +8,7 @@
 [functions]
   node_bundler = "esbuild"
 
-[redirects]
+[[redirects]]
   from = "/planet/*"
   to = "/.netlify/functions/fetch-swapi"
   status = 200

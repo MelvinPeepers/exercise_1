@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 // Define the Netlify Function handler
 // removed event, context cause they aren't read
 export async function handler(event, context) {
-  const { planetId } = event.path.split("/").pop();
+  const planetId = event.path.split("/").pop();
   try {
     // starts the timer to measure the fetch duration
     console.time("FETCHTIME");
@@ -20,7 +20,7 @@ export async function handler(event, context) {
     // Parse the JSON response body
     const data = await response.json();
 
-    // // Extract the 'name' property from the fetched data
+    // Extract the 'name' property from the fetched data
     // const name = data.result.properties.name;
 
     // Return a successful response with the planet name as the body
@@ -38,3 +38,10 @@ export async function handler(event, context) {
     };
   }
 }
+
+// export async function handler(event, context) {
+//   return {
+//     statusCode: 200,
+//     body: JSON.stringify({ message: "Function is working" }),
+//   };
+// }
