@@ -11,7 +11,7 @@ export async function handler(event, context) {
 
     // Make a GET request to the SWAPI to fetch the data for planet with ID 1
     const response = await fetch(
-      "https://www.swapi.tech/api/planets/${planetId}"
+      `https://www.swapi.tech/api/planets/${planetId}`
     );
 
     // End the timer and log the fetch duration
@@ -26,7 +26,7 @@ export async function handler(event, context) {
     // Return a successful response with the planet name as the body
     return {
       statusCode: 200, // HTTP status code 200 indicates success
-      body: name, // Response body contains the planet name
+      body: JSON.stringify(data), // Response body contains the planet name
     };
   } catch (err) {
     // Catch and handle any errors that occur during the try block
