@@ -5,6 +5,10 @@ import fetch from "node-fetch";
 // removed event, context cause they aren't read
 export async function handler(event, context) {
   const planetId = event.path.split("/").pop();
+  // event.path contains the full URL path of the request.
+  // split('/') splits the path into an array of strings, dividing it by each /.
+  // pop() takes the last element of this array, which in this case is expected to be the planetId.
+
   try {
     // starts the timer to measure the fetch duration
     console.time("FETCHTIME");
@@ -21,12 +25,12 @@ export async function handler(event, context) {
     const data = await response.json();
 
     // Extract the 'name' property from the fetched data
-    // const name = data.result.properties.name;
+    const name = data.result.properties.name;
 
     // Return a successful response with the planet name as the body
     return {
       statusCode: 200, // HTTP status code 200 indicates success
-      body: JSON.stringify(data), // Response body contains the planet name
+      body: JSON.stringify({ name }), // Response body contains the planet name
     };
   } catch (err) {
     // Catch and handle any errors that occur during the try block
@@ -39,6 +43,7 @@ export async function handler(event, context) {
   }
 }
 
+// Debug code
 // export async function handler(event, context) {
 //   return {
 //     statusCode: 200,
