@@ -30,7 +30,7 @@ export async function handler(event, context) {
     // Return a successful response with the planet name as the body
     return {
       statusCode: 200, // HTTP status code 200 indicates success
-      body: JSON.stringify({ name }), // Response body contains the planet name
+      body: name, // Response body contains the planet name
     };
   } catch (err) {
     // Catch and handle any errors that occur during the try block
