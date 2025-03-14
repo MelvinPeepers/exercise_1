@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../Users/melvinpeepers/My_Documents/Netlify_Work/Netlify_Examples/Assignment/exercise_1/netlify/functions/https-swapi.js"],
+  "sourceRoot": "/var/folders/bv/dnwp4yn92tn5579r2h7wtjjw0000gn/T/tmp-7163-e540wlwc0BPn",
+  "sourcesContent": ["// inporting the Node.js built-in https module\nconst https = require(\"https\");\n\nexports.handler = async (event, context) => {\n  const url = \"https://www.swapi.tech/api/planets/1/\";\n\n  return new Promise((resolve) => {\n    console.time(\"HTTPSTIME\");\n    https.get(url, (response) => {\n      let data = \"\";\n      response.on(\"data\", (chunk) => (data += chunk));\n      response.on(\"end\", () => {\n        resolve({\n          statusCode: 200,\n          body: data,\n        });\n      });\n    });\n    console.timeEnd(\"HTTPSTIME\");\n  });\n};\n"],
+  "mappings": ";AACA,IAAM,QAAQ,QAAQ,OAAO;AAE7B,QAAQ,UAAU,OAAO,OAAO,YAAY;AAC1C,QAAM,MAAM;AAEZ,SAAO,IAAI,QAAQ,CAAC,YAAY;AAC9B,YAAQ,KAAK,WAAW;AACxB,UAAM,IAAI,KAAK,CAAC,aAAa;AAC3B,UAAI,OAAO;AACX,eAAS,GAAG,QAAQ,CAAC,UAAW,QAAQ,KAAM;AAC9C,eAAS,GAAG,OAAO,MAAM;AACvB,gBAAQ;AAAA,UACN,YAAY;AAAA,UACZ,MAAM;AAAA,QACR,CAAC;AAAA,MACH,CAAC;AAAA,IACH,CAAC;AACD,YAAQ,QAAQ,WAAW;AAAA,EAC7B,CAAC;AACH;",
+  "names": []
+}

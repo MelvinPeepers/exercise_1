@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Cookeville",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "TN",
+				"name": "Tennessee"
+			},
+			"timezone": "America/Chicago",
+			"latitude": 36.2155,
+			"longitude": -85.5426
+		},
+		"timestamp": 1718041142188
+	}
+}

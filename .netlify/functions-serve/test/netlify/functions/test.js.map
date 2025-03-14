@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../Users/melvinpeepers/My_Documents/Netlify_Work/Netlify_Examples/Assignment/exercise_1/netlify/functions/test.mjs"],
+  "sourceRoot": "/var/folders/bv/dnwp4yn92tn5579r2h7wtjjw0000gn/T/tmp-7163-HVXsHj4bJc6f",
+  "sourcesContent": ["// https://docs.netlify.com/functions/get-started/?fn-language=js#code-your-function-2\n\nexport async function handler(event, context) {\n  console.time(\"TIME\");\n\n  // Perform an asynchronous operation (e.g., setTimeout)\n  await new Promise((resolve) => {\n    setTimeout(() => {\n      resolve();\n    }, 1000); // Wait for 1 second\n  });\n\n  console.timeEnd(\"TIME\");\n\n  return {\n    statusCode: 200,\n    body: \"Netlify function executed!\",\n  };\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,eAAsB,QAAQ,OAAO,SAAS;AAC5C,UAAQ,KAAK,MAAM;AAGnB,QAAM,IAAI,QAAQ,CAAC,YAAY;AAC7B,eAAW,MAAM;AACf,cAAQ;AAAA,IACV,GAAG,GAAI;AAAA,EACT,CAAC;AAED,UAAQ,QAAQ,MAAM;AAEtB,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM;AAAA,EACR;AACF;",
+  "names": []
+}
